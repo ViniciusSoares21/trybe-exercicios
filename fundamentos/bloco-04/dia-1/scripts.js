@@ -20,3 +20,17 @@
 
 //EXERCICIO 3
 
+ let leticia = 26
+ let jaco = 22
+ let vinicius = 19
+
+ if (leticia > jaco && leticia > vinicius) {
+    console.log ("mais velha leticia")
+ }
+ else if (jaco > leticia && jaco > vinicius) {
+    console.log ("mais velha jaco ")
+ } 
+ else{
+    console.log ("mais velho vinicius")
+ }
+ 
