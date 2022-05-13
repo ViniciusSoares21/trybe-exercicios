@@ -1,26 +1,26 @@
 //EXERCICIO 1
 
- const a = 10;
+ /* const a = 10;
  const b = 2;
 
  console.log (a + b)
  console.log (a - b)
  console.log (a * b)
  console.log (a / b)
- console.log (a % b)
+ console.log (a % b) */
  
 //EXERCICIO 2
 
- if (a > b ) {
+/*  if (a > b ) {
   console.log ("variacao maior a")
  }
  else{
   console.log ("variacao maior b")
- } 
+ }  */
 
 //EXERCICIO 3
 
- let leticia = 26
+/*  let leticia = 26
  let jaco = 22
  let vinicius = 19
 
@@ -32,5 +32,19 @@
  } 
  else{
     console.log ("mais velho vinicius")
+ } */
+
+//EXERCICIO 4
+
+ let numero = 0
+
+ if (numero > 0) {
+    console.log ("Positivo")
+ }
+ else if (numero < 0) {
+    console.log ("Negativo")
+ } 
+ else{
+    console.log ("Zero")
  }
  
