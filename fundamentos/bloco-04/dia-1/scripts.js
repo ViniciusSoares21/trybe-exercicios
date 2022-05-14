@@ -49,14 +49,28 @@
  }
   */
 // EXERCICIO 5
+/* 
+ let a = 60
+ let b = 80
+ let c = 60
 
-let a = 60
-let b = 80
-let c = 60
-
-if (a+b+c === 180) {
+ if (a+b+c === 180) {
    console.log (true)
+ }
+ else{
+   console.log (false)
+ }
+ */
+//EXERCICIO 6
+
+let peça ="bispo"
+
+if (peça =="BISPO".toLowerCase()) {
+   console.log ("Anda diagonal")
 }
 else{
-   console.log (false)
+   console.log ("ERRO verifique se a peça esta correta")
 }
+
+
+
