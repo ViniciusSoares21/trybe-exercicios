@@ -11,11 +11,11 @@
  
 //EXERCICIO 2
 
-/*  if (a > b ) {
-  console.log ("variacao maior a")
+ /*if (a > b ) {
+   console.log ("variacao maior a")
  }
  else{
-  console.log ("variacao maior b")
+   console.log ("variacao maior b")
  }  */
 
 //EXERCICIO 3
@@ -35,7 +35,7 @@
  } */
 
 //EXERCICIO 4
-
+/* 
  let numero = 0
 
  if (numero > 0) {
@@ -47,4 +47,16 @@
  else{
     console.log ("Zero")
  }
- 
+  */
+// EXERCICIO 5
+
+let a = 60
+let b = 80
+let c = 60
+
+if (a+b+c === 180) {
+   console.log (true)
+}
+else{
+   console.log (false)
+}
