@@ -75,10 +75,13 @@ else{
 
 //EXERCICIOS 7
 
- let nota = 95
+ let nota = 102
 
- if (nota >= 90){
-   console.log("A")
+ if(nota < 0 || nota > 100){
+   console.log("ERRO")
+ }
+ else if (nota >= 90){
+   console.log("A") 
  }
  else if (nota >= 80){
    console.log("B")
@@ -92,10 +95,13 @@ else{
  else if (nota >= 50){
    console.log("E")
  }
- else{
+ else if (nota < 50){
    console.log("F")
  }
+ else{
+   console.log("erro")
+ }
 
- 
+
 
 
