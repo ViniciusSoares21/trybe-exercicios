@@ -63,18 +63,18 @@
  */
 //EXERCICIO 6
 /* 
-let peça ="bispo"
+ let peça ="bispo"
 
-if (peça =="BISPO".toLowerCase()) {
+ if (peça =="BISPO".toLowerCase()) {
    console.log ("Anda diagonal")
-}
-else{
+ }
+ else{
    console.log ("ERRO verifique se a peça esta correta")
-}
+ }
  */
 
 //EXERCICIOS 7
-
+/* 
  let nota = 102
 
  if(nota < 0 || nota > 100){
@@ -100,6 +100,19 @@ else{
  }
  else{
    console.log("erro")
+ }
+ */
+//EXERCICIO 8 
+
+ const nume1 = 5
+ const nume2 = 4
+ const nume3 = 3
+
+ if (nume1 % 2 === 0 || nume2 % 2 === 0 || nume3 % 2 === 0){
+    console.log("true")
+ }
+ else{
+    console.log("false")
  }
 
 
