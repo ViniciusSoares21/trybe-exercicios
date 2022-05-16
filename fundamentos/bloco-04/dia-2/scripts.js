@@ -59,4 +59,17 @@ for (let index = 0; index < numbers.length; index +=1){
  else{
    console.log(resultado)
  }
- */
+ */ 
+
+ //EXERCICIO 7
+
+ let menorNum = numbers[0];
+
+for (let index = 1; index < numbers.length; index +=1){
+  if (numbers[index] < menorNum){
+  menorNum = numbers[index]
+  }
+  
+ }
+ console.log(menorNum)
+
