@@ -35,8 +35,18 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 //EXERCICIO 5
 
-//EXERCICIO 6 
+let maiorNum = numbers[0];
 
+for (let index = 1; index < numbers.length; index +=1){
+  if (numbers[index] > maiorNum){
+  maiorNum = numbers[index]
+  }
+  
+ }
+ console.log(maiorNum)
+
+//EXERCICIO 6 
+/* 
 for (let index = 0; index < numbers.length; index +=1){
   if (numbers[index] % 2 !== 0){ 
     resultado += 1;
@@ -49,3 +59,4 @@ for (let index = 0; index < numbers.length; index +=1){
  else{
    console.log(resultado)
  }
+ */
