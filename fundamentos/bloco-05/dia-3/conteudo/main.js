@@ -1,71 +1,98 @@
-const firstLi = document.getElementById('first-li');
-const secondLi = document.getElementById('second-li');
-const thirdLi = document.getElementById('third-li');
-const input = document.getElementById('input');
-const myWebpage = document.getElementById('my-spotrybefy');
+window.onload = function() {
+  function setBackgroundColor(color) {
+    let content = document.querySelector(".content")
+    content.style.backgroundColor = color
+    localStorage.setItem("backgroundColor", color)
+  }
 
+  function setFontColor(color) {
+    let paragraphs = document.querySelectorAll(".paragraph")
+    for (let index = 0; index < paragraphs.length; index += 1) {
+      paragraphs[index].style.color = color
+    }
+    localStorage.setItem("fontColor", color)
+  }
 
-// 1. Copie esse arquivo e edite apenas ele;
-// 1.1. Antes de começar os exercícios, use o LiveServer para dar uma olhada em como está a página no navegador.
-// 1.2. Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
+  function setFontSize(size) {
+    let paragraphs = document.querySelectorAll(".paragraph")
+    for (let index = 0; index < paragraphs.length; index += 1) {
+      paragraphs[index].style.fontSize = size
+    }
+    localStorage.setItem("fontSize", size)
+  }
 
-// 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
-// 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
-function adicionaTech(event){
-    const techElement = document.querySelector(".tech");
-    techElement.classList.remove("tech");
-    event.target.classList.add("tech");
-    input.value = "";
+  function setLineHeight(height) {
+    let paragraphs = document.querySelectorAll(".paragraph")
+    for (let index = 0; index < paragraphs.length; index += 1) {
+      paragraphs[index].style.lineHeight = height
+    }
+    localStorage.setItem("lineHeight", height)
+  }
+
+  function setFontFamily(family) {
+    let paragraphs = document.querySelectorAll(".paragraph")
+    for (let index = 0; index < paragraphs.length; index += 1) {
+      paragraphs[index].style.fontFamily = family
+    }
+    localStorage.setItem("fontFamily", family)
+  }
+
+  // background-color
+  let backgroundColorButtons = document.querySelectorAll("#background-color>button")
+  for (let index = 0; index < backgroundColorButtons.length; index += 1) {
+    backgroundColorButtons[index].addEventListener("click", function(event) {
+      setBackgroundColor(event.target.innerHTML)
+    })
+  }
+
+  // font-color
+  let fontColorButtons = document.querySelectorAll("#font-color>button")
+  for (let index = 0; index < fontColorButtons.length; index += 1) {
+    fontColorButtons[index].addEventListener("click", function(event) {
+      setFontColor(event.target.innerHTML)
+    })
+  }
+
+  // font-size
+  let fontSizeButtons = document.querySelectorAll("#font-size>button")
+  for (let index = 0; index < fontSizeButtons.length; index += 1) {
+    fontSizeButtons[index].addEventListener("click", function(event) {
+      setFontSize(event.target.innerHTML)
+    })
+  }
+
+  // line-height
+  let lineHeightButtons = document.querySelectorAll("#line-height>button")
+  for (let index = 0; index < lineHeightButtons.length; index += 1) {
+    lineHeightButtons[index].addEventListener("click", function(event) {
+      setLineHeight(event.target.innerHTML)
+    })
+  }
+
+  // font-family
+  let fontFamilyButtons = document.querySelectorAll("#font-family>button")
+  for (let index = 0; index < fontFamilyButtons.length; index += 1) {
+    fontFamilyButtons[index].addEventListener("click", function(event) {
+      setFontFamily(event.target.innerHTML)
+    })
+  }
+
+  function initialize() {
+    let backgroundColor = localStorage.getItem("backgroundColor")
+    if (backgroundColor) setBackgroundColor(backgroundColor)
+
+    let fontColor = localStorage.getItem("fontColor")
+    if (fontColor) setFontColor(fontColor)
+
+    let fontSize = localStorage.getItem("fontSize")
+    if (fontSize) setFontSize(fontSize)
+
+    let lineHeight = localStorage.getItem("lineHeight")
+    if (lineHeight) setLineHeight(lineHeight)
+
+    let fontFamily = localStorage.getItem("fontFamily")
+    if (fontFamily) setFontFamily(fontFamily)
+  }
+
+  initialize()
 }
-
-firstLi.addEventListener("click", adicionaTech);
-secondLi.addEventListener("click", adicionaTech);
-thirdLi.addEventListener("click", adicionaTech);
-
-
-
-// 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
-// com a classe 'tech';
-input.addEventListener("input", function(event){
-    const techElement = document.querySelector(".tech");
-    techElement.innerText = event.target.value;
-});
-
-
-
-// 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
-// redirecione para alguma página;
-// 4.1. Que tal redirecionar para seu portfólio?
-myWebpage.addEventListener("dblclick", function() {
-    window.location.replace('https://blog.betrybe.com/');
-});
-
-
-
-// 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
-// a cor do mesmo;
-myWebpage.addEventListener('mouseover', function(event) {
-    event.target.style.color = 'red';
-  });
-  
-  myWebpage.addEventListener('mouseout', function(event) {
-    event.target.style.color = 'unset';
-  });
-  
-
-  
-// Segue abaixo um exemplo do uso de event.target:
-
-
-function resetText(event) {
-  // O Event é passado como um parâmetro para a função.
-  event.target.innerText = 'Opção reiniciada';
-  // O event possui várias propriedades, porém a mais usada é o event.target,
-  // que retorna o objeto que disparou o evento.
-}
-
-firstLi.addEventListener('dblclick', resetText);
-
-// Não precisa passar o parâmetro dentro da callback resetText. O próprio
-// navegador fará esse trabalho por você, não é legal? Desse jeito, o
-// event.target na nossa função retornará o objeto 'firstLi'.
