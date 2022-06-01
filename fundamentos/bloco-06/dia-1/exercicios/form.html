@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrybeTrip</title>
+</head>
+<body>
+    <header>
+        <h1>Header da página</h1>
+    </header>
+    
+        <form action="" method="get">
+        <label for="nickname"> Nome: </label>
+        <input type="text" name="nickname" id="nickname" maxlength="40" minlength="10" required>
+        <br>
+        <label for="nickemail"> Email: </label>
+        <input type="email" name="email" id="nickemail" maxlength="40" minlength="10" required>
+        
+        <div class="options">
+            <input type="radio" name="option" id="option1">
+            <label for="option1">Cidade</label>
+            <input type="radio" name="option" id="option2">
+            <label for="option2">Campo</label>
+            <input type="radio" name="option" id="option3">
+            <label for="option3">Praia</label>
+            <input type="radio" name="option" id="option4">
+            <label for="option4">Montanhas</label>
+        </div>
+
+        <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+        <textarea name="resposta" id="response1" cols="60" rows="10"placeholder=>Digite sua resposta vencedora aqui</textarea>
+        <br>    
+        <label for="date">Qual a melhor data para realizar sua viagem?: </label>
+        <br>
+        <input type="date" id="date">
+        <br>
+        <input type="checkbox" name="Concordo" id="concordo1">
+        <label for="concordo1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe.</label>
+        <br>
+        <input type="checkbox" name="Concordo" id="concordo2">
+        <label for="concordo2">Concordo que imagens de minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+        <br>
+    <button type="submit"id="botao">Participar do concurso TrybeTrip</button>
+    <button type="button" id="clear-btn">Apagar informações</button>
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html>
