@@ -1,0 +1,112 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header nav{
+  background-color: rgb(63, 58, 58);
+
+}
+   
+@media screen and (max-width: 649px ) {
+  header h1{
+    font-size: 35px;
+  }
+  header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+    color: white;
+    font-size: 17px;
+  }
+  aside h2{
+   margin: 8.5%;
+   margin-bottom: 0px;
+  }
+  article h1{
+    font-size: 20px;
+    text-align: center;
+  }
+  article p{
+  margin-left: 6% ;
+  margin-right: 6%;
+  padding: 10px;
+  }
+  footer h3{
+    font-size: 20px;
+    margin-left: 8.5%;
+    margin-right: 3.5%;
+    margin-bottom: 1px; 
+  }
+  footer p{
+    margin-left: 6% ;
+    margin-right: 6%;
+    padding: 0px;
+  }
+  body{
+    background-color: aqua;
+  }
+}
+
+@media screen and (min-width: 650px ) {
+  body{
+    background-color: red;
+  }
+  header h1{
+    font-size: 35px;
+    margin-left: 5%;
+  }
+  header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    color: white;
+    font-size: 25px;
+  }
+  
+  aside h2{
+   margin: 8.5%;
+   margin-bottom: 0px;
+   font-size: 30px;
+  }
+  aside ul{
+    margin-left: 5%;
+    font-size: 20px;
+  }
+  article h1{
+    font-size: 20px;
+    text-align: center;
+  }
+  article p{
+  margin-left: 6% ;
+  margin-right: 6%;
+  padding: 2px;
+  }
+  footer h3{
+    font-size: 20px;
+    margin-left: 8.5%;
+    margin-right: 3.5%;
+    margin-bottom: 1px; 
+  }
+  footer p{
+    margin-left: 6% ;
+    margin-right: 6%;
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 1000px ) {
+  body{
+    background-color: tomato;
+  }
+}
