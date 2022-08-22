@@ -11,7 +11,7 @@ const INITIAL_STATE = {
 
 const CHANGE_THEME = "CHANGE_THEME";
 
-function reducer(state = INITIAL_STATE, action) {
+function reducerTheme(state = INITIAL_STATE, action) {
   switch (action.type) {
     case CHANGE_THEME:
       return {
@@ -23,12 +23,11 @@ function reducer(state = INITIAL_STATE, action) {
   }
 }
 
-const store = Redux.createStore(reducer);
+const store1 = Redux.createStore(reducerTheme);
 
 // Subscrevendo meu estado
-store.subscribe(() => {
-  const { theme } = store.getState();
-  console.log(store.getState());
+store1.subscribe(() => {
+  const { theme } = store1.getState();
   wrapper.classList = theme
 })
 
@@ -43,7 +42,7 @@ const actionChangeTheme = () => {
 // ===== Ato III =====
 // Chamar o Dispatch e Reducer part 2
 button.addEventListener("click", () => {
-  store.dispatch(actionChangeTheme());
+  store1.dispatch(actionChangeTheme());
 })
 
 // ===== Ato IV =====
