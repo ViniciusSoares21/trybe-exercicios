@@ -6,7 +6,7 @@ const lampada = document.getElementById("light-bulb");
 // ===== Ato I =====
 // Criar Store e Reducer part 1
 const INITIAL_STATE = {
-  theme: "light",
+  theme: "dark",
 };
 
 const CHANGE_THEME = "CHANGE_THEME";
@@ -16,7 +16,7 @@ function reducerTheme(state = INITIAL_STATE, action) {
     case CHANGE_THEME:
       return {
         ...state,
-        theme: state.theme === "light" ? "dark" : "light"
+        theme: state.theme === "dark" ? "light" : "dark"
       };
       default:
         return state;

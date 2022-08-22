@@ -23,10 +23,10 @@ const initialState = 0;
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case INCREMENTO:
-      return state + 1
+      return state += 1
 
       case DECREMENTO:
-      return state - 1
+      return state -= 1
       default:
         return state;
   }
