@@ -56,4 +56,38 @@ WHERE last_name in('hicks', 'crawford', 'henry', 'boyd', 'mason', 'morales', 'ke
 SELECT email, address_id FROM sakila.customer
 WHERE address_id in(172, 173, 174, 175, 176) ORDER BY email; 
 
+/*3. */
+SELECT COUNT(*) FROM sakila.payment
+WHERE DATE(payment_date) between '2005-05-01' AND '2005-08-1' ;
+
+/*4. */
+SELECT title, release_year, rental_duration FROM sakila.film
+WHERE rental_duration BETWEEN 3 AND 6 ORDER BY rental_duration DESC, title;
+
+/*5. */
+SELECT title, rating FROM sakila.film
+WHERE rating in('G', 'PG', 'PG-13') ORDER BY title LIMIT 500;
+
+/*Data e tempo*/
+/*1. */
+SELECT COUNT(*) FROM sakila.payment
+WHERE DATE(payment_date) LIKE '2005-05-25' ;
+
+/*2. */
+SELECT COUNT(*) FROM sakila.payment
+WHERE DATE(payment_date) between '2005-07-01' AND '2005-08-22' ;
+
+/*3. */
+SELECT DATE(rental_date) AS Data,
+YEAR(rental_date) AS Ano ,
+MONTH(rental_date) AS Mes,
+DAY(rental_date) AS Dia,
+HOUR(rental_date) AS Hora,
+MINUTE(rental_date) AS Minuto,
+SECOND(rental_date) AS Segundo FROM sakila.rental
+WHERE rental_id = 10330;
+
+/*4. */
+SELECT * FROM sakila.payment
+WHERE DATE(payment_date) = '2005-07-28' AND HOUR(payment_date) >= 22;
 
