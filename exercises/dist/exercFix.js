@@ -2,6 +2,7 @@
 function getLosangoArea(D, d) {
     return (D * d) / 2;
 }
+
 function getTrapezioArea(B, b, h) {
     return ((B + b) * h) / 2;
 }
