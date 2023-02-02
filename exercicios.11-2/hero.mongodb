@@ -1,0 +1,22 @@
+use('Hero');
+
+// exercisio: 1
+ // db.hero.findOne();
+
+// exercicio: 2
+ // db.hero.find({ "aspects.height": { $lt: 180 } }).pretty();
+
+// exercicios: 3
+ // db.hero.countDocuments({ "aspects.height": { $lt: 180 } });
+
+// exercicios: 4
+ // db.hero.countDocuments({ "aspects.height": { $lte: 180 } });
+
+// exercicio: 9
+ // db.hero.find({ "aspects.hairColor": { $in: ["black", "no hair"] } })
+
+// exercicio: 12
+ // db.hero.countDocuments({ "aspects.height": { $not: { $gt: 180 } } })
+
+// exercicio: 19 
+db.hero.deleteMany({ publisher: "George Lucas"})
