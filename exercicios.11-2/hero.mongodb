@@ -12,11 +12,47 @@ use('Hero');
 // exercicios: 4
  // db.hero.countDocuments({ "aspects.height": { $lte: 180 } });
 
+// exercicio: 5
+ // db.hero.findOne({ "aspects.height": { $gte: 200 } });
+
+// exercicio: 6
+ // db.hero.countDocuments({ "aspects.height": { $gte: 200 } });
+
+// exercicio: 7
+ // db.hero.find({ "aspects.eyeColor": "green"});
+
+// exercicio: 8
+ // db.hero.countDocuments({ "aspects.eyeColor": "blue"});
+
 // exercicio: 9
- // db.hero.find({ "aspects.hairColor": { $in: ["black", "no hair"] } })
+ // db.hero.find({ "aspects.hairColor": { $in: ["black", "no hair"] } });
+
+// exercicio: 10
+ // db.hero.countDocuments({ "aspects.hairColor": { $in: ["black", "no hair"] } });
+
+// exercicio: 11
+ // db.hero.countDocuments({ "aspects.hairColor": { $nin: ["black", "no hair"] } });
 
 // exercicio: 12
  // db.hero.countDocuments({ "aspects.height": { $not: { $gt: 180 } } })
 
+// exercicio: 13
+ // db.hero.find({ $nor: [ {race: "Human" }, {"aspects.height":  { $gt: 180 }}] });
+
+// exercicio: 14
+ // db.hero.find({ "aspects.height": { $in: [ 180, 200 ]}, publisher: "Marvel Comics"});
+
+// exercicio: 15
+ // db.hero.find({ "aspects.weight": { $gte: 80, $lte: 100 }, race: {$in: ["Human", "Mutant"]}, publisher: {$ne: "DC Comics"}})
+
+// exercicio: 16
+ // db.hero.countDocuments({ race: { $exists: false }})
+
+// exercicio: 17
+ // db.hero.countDocuments({ "aspects.hairColor": { $exists: true }})
+
+// exercicio: 18
+ // db.hero.deleteOne({ publisher: "Sony Pictures"})
+
 // exercicio: 19 
-db.hero.deleteMany({ publisher: "George Lucas"})
+ // db.hero.deleteMany({ publisher: "George Lucas"})
